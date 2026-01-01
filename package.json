@@ -1,5 +1,18 @@
 {
+  "name": "fullstack-project",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "node backend/index.js",
+    "dev:bff": "node bff/index.js",
+    "build:frontend": "cd frontend && npm run build",
+    "prod": "npm run build:frontend && cross-env NODE_ENV=production node bff/index.js"
+
+  },
   "dependencies": {
     "pinia": "^3.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
